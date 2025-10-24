@@ -1,0 +1,61 @@
+*** Begin Patch
+*** Update File: src/styles.css
+@@
+-#p2017 {
+-  background: #ffffff;
+-  color: #111;
+-  scroll-margin-top: 72px; /* avoid header covering on anchor scrolls */
+-}
++#p2017 {
++  background: #ffffff;
++  color: #111;
++  scroll-margin-top: 72px; /* avoid header covering on anchor scrolls */
++  padding-block: clamp(140px, 20vh, 240px);
++}
+@@
+-#p2017 .era-inner{
+-  gap: clamp(32px, 6vw, 80px);
+-}
++#p2017 .era-inner{
++  gap: clamp(32px, 6vw, 80px);
++  align-items: flex-start;
++}
+@@
+-#p2017 .era-visual{
+-  justify-self: flex-start;
+-}
++#p2017 .era-visual{
++  justify-self: flex-start;
++}
+@@
+-#p2017 .phone-wrap--x{
+-  width: clamp(600px, 35vw, 880px);
+-}
++#p2017 .phone-wrap--x{
++  width: clamp(640px, 48vw, 920px);
++}
+ 
+ #p2017 .era-phone{
+   width: 100%;
+   filter: drop-shadow(0 20px 52px rgba(0,0,0,.22));
+ }
+ 
+ #p2017 .era-copy{
+   max-width: 68ch;
+   position: relative;
+-  padding-right: clamp(16px, 8vw, 260px);
++  padding-right: clamp(16px, 8vw, 260px);
++  padding-top: clamp(0px, 2vh, 28px);
+ }
+@@
+-#p2017 .era-year{
+-  color: #111;
+-  opacity: .06;
+-}
++#p2017 .era-year{
++  top: 70%;
++  transform: translateY(-50%);
++  color: #111;
++  opacity: .05;
++}
+*** End Patch

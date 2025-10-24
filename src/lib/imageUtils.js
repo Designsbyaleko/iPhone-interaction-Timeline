@@ -4,12 +4,13 @@
  * @returns {string} The correct path to the image
  */
 export function getImagePath(path) {
-  // For development, use relative path
+  // In development, use relative path
   if (import.meta.env.DEV) {
-    return `assets/${path}`;
+    return `./assets/${path}`;
   }
   
-  // For production (GitHub Pages), use the full path
-  const repoName = 'Culture_Design_A3_Web'; // Update this to match your repository name
-  return `/${repoName}/assets/${path}`;
+  // In production (GitHub Pages), use the full path with BASE_URL
+  const base = import.meta.env.BASE_URL || '/';
+  // Remove any double slashes and ensure proper format
+  return `${base.replace(/\/+$/, '')}/assets/${path}`.replace(/\/+/g, '/');
 }

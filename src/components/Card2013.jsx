@@ -98,7 +98,7 @@ export default function Card2013() {
           <div className="phone-wrap">
             {}
             <img
-              src={getImagePath('c2-minimal-front.png')}
+              src="/iPhone-interaction-Timeline/assets/c2-minimal-front.png"
 
               alt="iPhone with iOS 7 Home screen"
               className="era-phone era-phone--big"
@@ -109,7 +109,7 @@ export default function Card2013() {
 
             {}
             <motion.img
-              src={getImagePath('c2-control-center.png')}
+              src="/iPhone-interaction-Timeline/assets/c2-control-center.png"
               className="cc-overlay"
               style={{ y: ccParY, clipPath: ccClip, opacity: ccO }}
               draggable="false"

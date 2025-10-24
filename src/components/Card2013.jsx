@@ -43,7 +43,7 @@ export default function Card2013() {
     <section
       id="p2013"
       ref={ref}
-      className="section era era--alt era--light section--extra-top"
+      className="section era era--alt section--extra-top"
       aria-label="2013 - Digital Minimalism (iOS 7)"
     >
       <div className="era-inner era--roomy">

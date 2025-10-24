@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-
-const BASE_URL = import.meta.env.BASE_URL;
+import { getImagePath } from "./lib/imageUtils.js";
 
 import Card2007 from "./components/Card2007";
 import Card2013 from "./components/Card2013";
@@ -51,7 +50,7 @@ function Hero() {
         </div>
 
         <div className="hero-right" aria-hidden="true">
-          <motion.img src={`${BASE_URL}assets/hero-mockup.png`} alt="" className="hero-device" style={heroImageStyle} draggable="false" />
+          <motion.img src={getImagePath('hero-mockup.png')} alt="" className="hero-device" style={heroImageStyle} draggable="false" />
         </div>
 
         <button className="hero-cta" aria-label="Start" onClick={() => scrollToId("p2007")}>

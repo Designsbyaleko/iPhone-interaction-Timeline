@@ -1,8 +1,7 @@
 import React, { useMemo, useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
-
-const BASE_URL = import.meta.env.BASE_URL;
+import { getImagePath } from "../lib/imageUtils.js";
 
 export default function Card2025() {
   const sectionRef = useRef(null);
@@ -54,7 +53,7 @@ export default function Card2025() {
             style={prefersReducedMotion ? undefined : { y: phoneY, scale: phoneS, rotate: phoneR }}
           >
             <img
-              src={`${BASE_URL}assets/2025/device.png`}
+              src={getImagePath('2025/device.png')}
               alt="Future iPhone device concept"
               width="1390"
               height="3253"

@@ -20,8 +20,8 @@ html, body, #root{ height:100%; }
 
 body{
   margin:0;
-  background:#0b0c10;          
-  color:#f6f8fb;               
+  background: var(--bg);          
+  color: var(--fg);               
   font-family:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   scroll-behavior:smooth;
   transition: background .28s ease, color .28s ease;
@@ -332,12 +332,12 @@ body{
   .era *{ animation: none !important; transition: none !important; }
 }
 .era--light{
-  background:#fff;
-  color:#0b0d12;            
+  background: var(--bg);
+  color: var(--fg);            
 }
 
 .era--light .era-year{
-  color:#000;
+  color: var(--fg);
   opacity:.06;
   
 }
@@ -914,8 +914,8 @@ body{
 
 
 #p2017 {
-  background: #ffffff;
-  color: #111;
+  background: var(--bg);
+  color: var(--fg);
   scroll-margin-top: 72px; 
   padding-block: clamp(96px, 16vh, 200px);
   position: relative;
@@ -965,13 +965,13 @@ body{
 #p2017 .era-lede{
   font-weight: 600;
   margin: 10px 0 8px;
-  color: #16181d;
+  color: var(--fg);
   margin-right: -130px;
 }
 
 #p2017 .era-body{
   line-height: 1.55;
-  color: #3f4751;
+  color: var(--muted);
   padding-top: 15px;
   padding-bottom: 15px;
   margin-right: -130px;
@@ -979,7 +979,7 @@ body{
 }
 
 #p2017 .era-year{
-  color: #111;
+  color: var(--fg);
   opacity: .06;
 }
 
@@ -989,11 +989,11 @@ body{
 
 
 #p2017 .section-cta--ink{
-  color:#000000;                    
-  background:#000000;
-  border:1px solid #000000;
+  color: var(--fg);                    
+  background: var(--fg);
+  border: 1px solid var(--fg);
 }
-#p2017 .section-cta--ink:hover{ background:#000000; }
+#p2017 .section-cta--ink:hover{ background: var(--fg); }
 
 #p2017 .section--extra-top{ padding-top: clamp(160px, 20vh, 240px); }
  

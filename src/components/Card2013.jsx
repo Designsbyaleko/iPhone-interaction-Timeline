@@ -1,9 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
-
-
-const BASE_URL = import.meta.env.BASE_URL;
+import { getImagePath } from "../lib/imageUtils.js";
 
 
 export default function Card2013() {
@@ -100,7 +98,7 @@ export default function Card2013() {
           <div className="phone-wrap">
             {}
             <img
-              src={`${BASE_URL}assets/c2-minimal-front.png`}
+              src={getImagePath('c2-minimal-front.png')}
 
               alt="iPhone with iOS 7 Home screen"
               className="era-phone era-phone--big"
@@ -111,7 +109,7 @@ export default function Card2013() {
 
             {}
             <motion.img
-              src={`${BASE_URL}assets/c2-control-center.png`}
+              src={getImagePath('c2-control-center.png')}
               className="cc-overlay"
               style={{ y: ccParY, clipPath: ccClip, opacity: ccO }}
               draggable="false"

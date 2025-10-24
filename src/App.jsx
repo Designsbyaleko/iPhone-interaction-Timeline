@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 
-impconst BASE_URL = import.meta.env.BASE_URL;
+const BASE_URL = import.meta.env.BASE_URL;
 
 import Card2007 from "./components/Card2007";
 import Card2013 from "./components/Card2013";
@@ -52,7 +52,9 @@ function Hero() {
 
         <div className="hero-right" aria-hidden="true">
           <motion.img src={`${BASE_URL}assets/hero-mockup.png`} alt="" className="hero-device" style={heroImageStyle} draggable="false" />
- aria-label="Start" onClick={() => scrollToId("p2007")}>
+        </div>
+
+        <button className="hero-cta" aria-label="Start" onClick={() => scrollToId("p2007")}>
           <svg viewBox="0 0 24 24" fill="none">
             <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>

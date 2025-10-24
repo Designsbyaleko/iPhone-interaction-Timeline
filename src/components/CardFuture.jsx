@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
 
-conconst BASE_URL = import.meta.env.BASE_URL;
+const BASE_URL = import.meta.env.BASE_URL;
 
 const COPY = {
   tag: "Speculative Futures",
@@ -129,7 +129,11 @@ export default function CardFuture() {
           className="era-year era-year--img"
           src={`${BASE_URL}assets/future/2030 - 2050 (1).png`}
           alt=""
- </section>
+          aria-hidden="true"
+          style={{ x: yearX, scale: yearS }}
+          draggable="false"
+        />
+      </div>
+    </section>
   );
 }
-

@@ -24,7 +24,7 @@ const MILESTONES = [
       bg: "#f5f7fb", fg: "#0f1113",
       surface: "#ffffff", border: "#e6e8eb", muted: "#666f7a", accent: "#4aa3ff"
     },
-    visual: { src: \"\assets\Iphone.png\" },
+    visual: { src: "/assets/Iphone.png" },
     citations: [{ short: "iOS 7 HIG", full: "Apple. (2013). iOS 7 Human Interface Guidelines." }]
   },
   {
@@ -52,7 +52,7 @@ const MILESTONES = [
       surface: "#ffffff", border: "#e5e7ea", muted: "#606872", accent: "#7fd6ff"
     },
     visual: { src: "/assets/dynamic-island.png" },
-    citations: [{ short: "Dynamic Island", full: "Apple. (2022). iPhone 14 Pro ��" Dynamic Island." }]
+    citations: [{ short: "Dynamic Island", full: "Apple. (2022). iPhone 14 Pro - Dynamic Island" }]
   },
   {
     id: "p10",

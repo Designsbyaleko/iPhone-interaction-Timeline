@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform, useInView, useReducedMotion } from "fr
 import { scrollToNext } from "../lib/scroll.js";
 
 
-expconst BASE_URL = import.meta.env.BASE_URL;
+const BASE_URL = import.meta.env.BASE_URL;
 
 
 export default function Card2013() {
@@ -112,8 +112,8 @@ export default function Card2013() {
             {}
             <motion.img
               src={`${BASE_URL}assets/c2-control-center.png`}
-
-acity: ccO }}
+              className="cc-overlay"
+              style={{ y: ccParY, clipPath: ccClip, opacity: ccO }}
               draggable="false"
               aria-hidden="true"
               

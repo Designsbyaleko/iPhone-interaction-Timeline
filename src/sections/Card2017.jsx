@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
 
-export defconst BASE_URL = import.meta.env.BASE_URL;
+const BASE_URL = import.meta.env.BASE_URL;
 
 export default function Card2017() {
   const ref = useRef(null);
@@ -72,6 +72,7 @@ export default function Card2017() {
           <div className="phone-wrap phone-wrap--x" style={{ position: "relative", zIndex: 2 }}>
             <img
               src={`${BASE_URL}assets/2017/phones-angled.png`}
+              alt="iPhone X models angled view"
               loading="lazy"
               decoding="async"
               draggable="false"

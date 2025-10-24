@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 export default function Card2007() {
   const ref = useRef(null);
   const prefersReducedMotion = useReducedMotion();
@@ -44,8 +46,7 @@ export default function Card2007() {
         <motion.div className="era-visual" style={{ y: phoneY, scale: phoneS, rotate: phoneR }}>
           <div className="phone-wrap">
             <img
-              src="/assets/c1-home-front.png"
-             
+              src={`${BASE_URL}assets/c1-home-front.png`}
               alt="iPhone (original) with Home button"
               className="era-phone era-phone--big"
               draggable="false"

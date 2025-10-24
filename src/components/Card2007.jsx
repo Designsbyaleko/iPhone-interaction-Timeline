@@ -45,7 +45,7 @@ export default function Card2007() {
         <motion.div className="era-visual" style={{ y: phoneY, scale: phoneS, rotate: phoneR }}>
           <div className="phone-wrap">
             <img
-              public/assets/c1-home-front.png
+              src="public/assets/c1-home-front.png"
               alt="iPhone (original) with Home button"
               className="era-phone era-phone--big"
               draggable="false"

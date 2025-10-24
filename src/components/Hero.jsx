@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const DRAMA = 1.0;
 
 export default function Hero() {
@@ -48,7 +50,7 @@ export default function Hero() {
 
           <div className="hero-right" aria-hidden="true">
             <motion.img
-              src="/assets/hero-mockup.png"
+              src={`${BASE_URL}assets/hero-mockup.png`}
               alt=""
               className="hero-device"
               style={{ y: phoneY, scale: phoneS, rotate: phoneR }}

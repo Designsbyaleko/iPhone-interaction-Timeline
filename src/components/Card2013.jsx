@@ -3,6 +3,9 @@ import { motion, useScroll, useTransform, useInView, useReducedMotion } from "fr
 import { scrollToNext } from "../lib/scroll.js";
 
 
+expconst BASE_URL = import.meta.env.BASE_URL;
+
+
 export default function Card2013() {
   const ref = useRef(null);
   const prefersReducedMotion = useReducedMotion();
@@ -97,8 +100,8 @@ export default function Card2013() {
           <div className="phone-wrap">
             {}
             <img
-              src="/assets/c2-minimal-front.png"
-             
+              src={`${BASE_URL}assets/c2-minimal-front.png`}
+
               alt="iPhone with iOS 7 Home screen"
               className="era-phone era-phone--big"
               loading="lazy"
@@ -108,11 +111,9 @@ export default function Card2013() {
 
             {}
             <motion.img
-              src="/assets/c2-control-center.png"
-             
-              alt=""
-              className="cc-overlay"
-              style={{ y: ccParY, clipPath: ccClip, opacity: ccO }}
+              src={`${BASE_URL}assets/c2-control-center.png`}
+
+acity: ccO }}
               draggable="false"
               aria-hidden="true"
               

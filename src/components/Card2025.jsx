@@ -2,6 +2,8 @@ import React, { useMemo, useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
 
+expoconst BASE_URL = import.meta.env.BASE_URL;
+
 export default function Card2025() {
   const sectionRef = useRef(null);
   const prefersReducedMotion = useReducedMotion();
@@ -52,10 +54,8 @@ export default function Card2025() {
             style={prefersReducedMotion ? undefined : { y: phoneY, scale: phoneS, rotate: phoneR }}
           >
             <img
-              src="/assets/2025/device.png"
-              alt=""
-              width="1390"
-              height="3253"
+              src={`${BASE_URL}assets/2025/device.png`}
+       height="3253"
               loading="lazy"
               decoding="async"
             />

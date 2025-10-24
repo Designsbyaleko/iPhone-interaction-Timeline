@@ -45,7 +45,7 @@ export default function Card2007() {
           <div className="phone-wrap">
             <img
               src="/assets/c1-home-front.png"
-              
+             
               alt="iPhone (original) with Home button"
               className="era-phone era-phone--big"
               draggable="false"

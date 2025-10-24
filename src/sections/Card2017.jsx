@@ -8,6 +8,8 @@ import {
 } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
 
+export defconst BASE_URL = import.meta.env.BASE_URL;
+
 export default function Card2017() {
   const ref = useRef(null);
   const prefersReducedMotion = useReducedMotion();
@@ -69,9 +71,7 @@ export default function Card2017() {
 
           <div className="phone-wrap phone-wrap--x" style={{ position: "relative", zIndex: 2 }}>
             <img
-              src="/assets/2017/phones-angled.png"
-              alt=""
-              className="era-phone era-phone--big"
+              src={`${BASE_URL}assets/2017/phones-angled.png`}
               loading="lazy"
               decoding="async"
               draggable="false"

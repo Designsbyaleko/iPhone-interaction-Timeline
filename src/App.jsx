@@ -50,7 +50,7 @@ function Hero() {
         </div>
 
         <div className="hero-right" aria-hidden="true">
-          <motion.img src={getImagePath('hero-mockup.png')} alt="" className="hero-device" style={heroImageStyle} draggable="false" />
+          <motion.img src="/iPhone-interaction-Timeline/assets/hero-mockup.png" alt="" className="hero-device" style={heroImageStyle} draggable="false" />
         </div>
 
         <button className="hero-cta" aria-label="Start" onClick={() => scrollToId("p2007")}>

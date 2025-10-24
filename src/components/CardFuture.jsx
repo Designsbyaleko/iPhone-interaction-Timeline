@@ -112,7 +112,7 @@ export default function CardFuture() {
         >
           <div className="future-device">
             <img
-              src={getImagePath('future/device.png')}
+              src="/iPhone-interaction-Timeline/assets/future/device.png"
               alt=""
               width="818"
               height="1730"
@@ -126,7 +126,7 @@ export default function CardFuture() {
         {}
         <motion.img
           className="era-year era-year--img"
-          src={getImagePath('future/2030 - 2050 (1).png')}
+          src="/iPhone-interaction-Timeline/assets/future/2030 - 2050 (1).png"
           alt=""
           aria-hidden="true"
           style={{ x: yearX, scale: yearS }}

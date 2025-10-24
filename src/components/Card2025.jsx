@@ -53,7 +53,7 @@ export default function Card2025() {
             style={prefersReducedMotion ? undefined : { y: phoneY, scale: phoneS, rotate: phoneR }}
           >
             <img
-              src={getImagePath('2025/device.png')}
+              src="/iPhone-interaction-Timeline/assets/2025/device.png"
               alt="Future iPhone device concept"
               width="1390"
               height="3253"

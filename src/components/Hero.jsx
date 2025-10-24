@@ -53,7 +53,7 @@ export default function Hero() {
 
           <div className="hero-right" aria-hidden="true">
             <motion.img
-              src={getImagePath('hero-mockup.png')}
+              src="/iPhone-interaction-Timeline/assets/hero-mockup.png"
               alt=""
               className="hero-device"
               style={{ y: phoneY, scale: phoneS, rotate: phoneR }}

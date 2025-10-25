@@ -1,14 +1,2 @@
-assets/**/*.png filter=lfs diff=lfs merge=lfs -text
-assets/**/*.jpg filter=lfs diff=lfs merge=lfs -text
-assets/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
-assets/**/*.gif filter=lfs diff=lfs merge=lfs -text
-assets/**/*.webp filter=lfs diff=lfs merge=lfs -text
-assets/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
-assets/**/*.mov filter=lfs diff=lfs merge=lfs -text
-**/assets/**/*.png filter=lfs diff=lfs merge=lfs -text
-**/assets/**/*.jpg filter=lfs diff=lfs merge=lfs -text
-**/assets/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
-**/assets/**/*.gif filter=lfs diff=lfs merge=lfs -text
-**/assets/**/*.webp filter=lfs diff=lfs merge=lfs -text
-**/assets/**/*.mp4 filter=lfs diff=lfs merge=lfs -text
-**/assets/**/*.mov filter=lfs diff=lfs merge=lfs -text
+# Git LFS disabled for public assets - GitHub Pages doesn't serve LFS files
+# Only track source assets if needed, not built/public assets

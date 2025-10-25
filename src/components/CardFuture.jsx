@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
-import { getImagePath } from "../lib/imageUtils.js";
+import { asset } from "../lib/asset.js";
 
 const COPY = {
   tag: "Speculative Futures",
@@ -112,7 +112,7 @@ export default function CardFuture() {
         >
           <div className="future-device">
             <img
-              src="/iPhone-interaction-Timeline/assets/future/device.png"
+              src={asset('assets/future/device.png')}
               alt=""
               width="818"
               height="1730"
@@ -126,7 +126,7 @@ export default function CardFuture() {
         {}
         <motion.img
           className="era-year era-year--img"
-          src="/iPhone-interaction-Timeline/assets/future/2030 - 2050 (1).png"
+          src={asset('assets/future/2030 - 2050 (1).png')}
           alt=""
           aria-hidden="true"
           style={{ x: yearX, scale: yearS }}

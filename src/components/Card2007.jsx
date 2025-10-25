@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
-import { getImagePath } from "../lib/imageUtils.js";
+import { asset } from "../lib/asset.js";
 
 export default function Card2007() {
   const ref = useRef(null);
@@ -45,7 +45,7 @@ export default function Card2007() {
         <motion.div className="era-visual" style={{ y: phoneY, scale: phoneS, rotate: phoneR }}>
           <div className="phone-wrap">
             <img
-              src="/iPhone-interaction-Timeline/assets/c1-home-front.png"
+              src={asset('assets/c1-home-front.png')}
               alt="iPhone (original) with Home button"
               className="era-phone era-phone--big"
               draggable="false"

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
-import { getImagePath } from "../lib/imageUtils.js";
+import { asset } from "../lib/asset.js";
 
 export default function Card2022() {
   const ref = useRef(null);
@@ -96,7 +96,7 @@ export default function Card2022() {
         <motion.div className="era-visual" style={{ y: phoneY, scale: phoneS, rotate: phoneR }} aria-hidden="true">
           <div className="phone-wrap phone-wrap--2022">
             <img
-              src="/iPhone-interaction-Timeline/assets/2022/device.png"
+              src={asset('assets/2022/device.png')}
 
               height="2567"
               loading="lazy"

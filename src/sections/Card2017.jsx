@@ -7,8 +7,7 @@ import {
   useReducedMotion,
 } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
-
-const BASE_URL = import.meta.env.BASE_URL;
+import { asset } from "../lib/asset.js";
 
 export default function Card2017() {
   const ref = useRef(null);
@@ -71,7 +70,7 @@ export default function Card2017() {
 
           <div className="phone-wrap phone-wrap--x" style={{ position: "relative", zIndex: 2 }}>
             <img
-              src="/iPhone-interaction-Timeline/assets/2017/phones-angled.png"
+              src={asset('assets/2017/phones-angled.png')}
               alt="iPhone X models angled view"
               loading="lazy"
               decoding="async"

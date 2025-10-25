@@ -135,7 +135,7 @@ body{
 }
 
 
-.spacer{ height: 10vh; }
+.spacer{ height: 10vh; background: #000; }
 
 
 .era{ position: relative; padding: clamp(80px, 10vh, 140px) 28px; }
@@ -425,11 +425,20 @@ body{
 }
 
 #p2013 .era-year{
-  right: auto;
-  left: calc((100vw - min(100vw, 1400px)) / 2 + 28px); 
-  text-align: left;
-  margin-left:-22px;
-  padding-top: 45px;
+  position: absolute !important;
+  right: auto !important;
+  left: calc((100vw - min(100vw, 1400px)) / 2 + 28px) !important; 
+  top: 75% !important;
+  text-align: left !important;
+  margin-top: 10px !important;
+  padding-top: 0px !important;
+  font-size: clamp(64px, 16vw, 180px) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em !important;
+  color: rgba(29, 29, 31, 0.08) !important;
+  opacity: 1 !important;
+  pointer-events: none !important;
+  z-index: auto !important;
 }
 
 
@@ -591,12 +600,6 @@ body{
   #p2007 .era-copy{ padding-right: 0; }
 }
 
-
-#p2013 .era-year{
-  right: auto;
-  left: calc((100vw - min(100vw, 1400px)) / 2 + 28px); 
-  text-align: left;
-}
 
 @keyframes islandPulse {
   0%   { box-shadow: 0 0 0 0 rgba(130,120,255,.22); }
@@ -927,7 +930,8 @@ body{
 }
 
 #p2017 .era-visual{
-  justify-self: flex-start;
+  justify-self: flex-start !important;
+  display: block !important;
 }
 
 #p2017 .spotlight{
@@ -1745,4 +1749,272 @@ body{
     transform: translate(50%, 0);      /* center under phone area */
     font-size: clamp(7rem, 18vw, 16rem);
   }
+}
+
+/* ========================================
+   FIX: Hero section - dark background
+   ======================================== */
+.hero {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+.hero-sticky,
+.hero-inner {
+  isolation: isolate;
+}
+
+.hero-title,
+.hero-lede {
+  color: #fff !important;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--gx, 70%) var(--gy, 30%),
+    rgba(46, 137, 255, 0.15) 0%,
+    rgba(0, 0, 0, 0.95) 50%,
+    #000 100%
+  );
+  z-index: 0;
+}
+
+/* ========================================
+   FIX: 2007 card - DARK theme
+   ======================================== */
+section#p2007 {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+section#p2007 .era-title,
+section#p2007 .era-lede,
+section#p2007 .era-body {
+  color: #fff !important;
+}
+
+section#p2007 .era-chip {
+  color: rgba(255, 255, 255, 0.85) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+section#p2007 .section-cta {
+  background: color-mix(in oklab, var(--bg) 1%, #ffffff 92%) !important;
+  border-color: var(--border) !important;
+}
+
+section#p2007 .section-cta svg,
+section#p2007 button svg {
+  stroke: #000000 !important;
+}
+
+section#p2007 .era-year {
+  color: #fff !important;
+}
+
+/* ========================================
+   FIX: 2013 card - LIGHT theme (iOS 7)
+   ======================================== */
+section#p2013 {
+  background: #f5f5f7 !important;
+  color: #1d1d1f !important;
+}
+
+section#p2013 .era-title,
+section#p2013 .era-lede,
+section#p2013 .era-body {
+  color: #1d1d1f !important;
+}
+
+section#p2013 .era-chip {
+  color: rgba(29, 29, 31, 0.7) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+section#p2013 .section-cta--ink {
+  background: rgba(29, 29, 31, 0.92) !important;
+  border-color: rgba(29, 29, 31, 1) !important;
+}
+
+section#p2013 .section-cta--ink svg {
+  stroke: #fff !important;
+}
+
+/* ========================================
+   FIX: 2017 card - LIGHT theme + proper sizing
+   ======================================== */
+section#p2017 {
+  background: #fff !important;
+  color: #1d1d1f !important;
+  padding-block: clamp(140px, 20vh, 220px) !important;
+}
+
+section#p2017 .era-inner {
+  gap: clamp(36px, 6vw, 84px) !important;
+  grid-template-columns: 1.05fr 1.1fr !important;
+  grid-template-areas: "visual copy" !important;
+}
+
+section#p2017 .era-title,
+section#p2017 .era-lede,
+section#p2017 .era-body {
+  color: #1d1d1f !important;
+}
+
+section#p2017 .era-chip {
+  color: rgba(29, 29, 31, 0.7) !important;
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+section#p2017 .phone-wrap--x {
+  width: clamp(480px, 38vw, 680px) !important;
+}
+
+section#p2017 .phone-wrap--x img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 680px !important;
+}
+
+section#p2017 .section-cta--ink {
+  background: rgba(29, 29, 31, 0.92) !important;
+  border-color: rgba(29, 29, 31, 1) !important;
+}
+
+section#p2017 .section-cta--ink svg {
+  stroke: #fff !important;
+}
+
+section#p2017 .era-year {
+  color: rgba(29, 29, 31, 0.06) !important;
+}
+
+/* ========================================
+   FIX: 2022 card - DARK theme + proper sizing
+   ======================================== */
+section#p2022 {
+  background: #080b11 !important;
+  color: #e8edf6 !important;
+  padding-block: clamp(140px, 20vh, 220px) !important;
+}
+
+section#p2022 .era-inner {
+  gap: clamp(36px, 6vw, 84px) !important;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr) !important;
+  grid-template-areas: "copy visual" !important;
+}
+
+section#p2022 .era-title,
+section#p2022 .era-lede,
+section#p2022 .era-body {
+  color: #e8edf6 !important;
+}
+
+section#p2022 .phone-wrap--2022 {
+  width: clamp(460px, 42vw, 680px) !important;
+}
+
+section#p2022 .phone-wrap--2022 img {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 680px !important;
+}
+
+section#p2022 .section-cta--on-light,
+section#p2022 .section-cta {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+section#p2022 .section-cta--on-light svg,
+section#p2022 .section-cta svg {
+  stroke: #fff !important;
+}
+
+/* ========================================
+   FIX: 2025 card - LIGHT theme
+   ======================================== */
+section#p2025 {
+  background: #fff !important;
+  color: #1d1d1f !important;
+}
+
+section#p2025 .era-title,
+section#p2025 .era-lede,
+section#p2025 .era-body {
+  color: #1d1d1f !important;
+}
+
+section#p2025 .section-cta--on-dark,
+section#p2025 .section-cta {
+  background: rgba(29, 29, 31, 0.92) !important;
+  border-color: rgba(29, 29, 31, 1) !important;
+}
+
+section#p2025 .section-cta--on-dark svg,
+section#p2025 .section-cta svg {
+  stroke: #fff !important;
+}
+
+/* ========================================
+   FIX: Future card - DARK theme
+   ======================================== */
+section#pfuture {
+  background: #000 !important;
+  color: #fff !important;
+}
+
+section#pfuture .era-title,
+section#pfuture .era-lede,
+section#pfuture .era-body {
+  color: #fff !important;
+}
+
+section#pfuture .era-chip {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+section#pfuture .section-cta svg {
+  stroke: #fff !important;
+}
+
+/* ========================================
+   FIX: Image sizing to prevent scroll issues
+   ======================================== */
+.era-visual img,
+.era-phone {
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+/* ========================================
+   FIX: Global chevron color overrides
+   ======================================== */
+/* Override the default black stroke */
+body .section-cta svg {
+  stroke: currentColor !important;
+}
+
+/* Dark sections - white chevrons */
+body section#p2022 .section-cta svg,
+body section#p2022 button svg,
+body section#pfuture .section-cta svg,
+body section#pfuture button svg {
+  stroke: #fff !important;
+}
+
+/* Light sections with dark CTA buttons - white chevrons */
+body section#p2013 .section-cta--ink svg,
+body section#p2013 button svg,
+body section#p2017 .section-cta--ink svg,
+body section#p2017 button svg,
+body section#p2025 .section-cta--on-dark svg,
+body section#p2025 .section-cta svg,
+body section#p2025 button svg {
+  stroke: #fff !important;
 }

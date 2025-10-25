@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { getImagePath } from "./lib/imageUtils.js";
+import { asset } from "./lib/asset.js";
 
 import Card2007 from "./components/Card2007";
 import Card2013 from "./components/Card2013";
@@ -50,7 +50,7 @@ function Hero() {
         </div>
 
         <div className="hero-right" aria-hidden="true">
-          <motion.img src="/iPhone-interaction-Timeline/assets/hero-mockup.png" alt="" className="hero-device" style={heroImageStyle} draggable="false" />
+          <motion.img src={asset('assets/hero-mockup.png')} alt="" className="hero-device" style={heroImageStyle} draggable="false" />
         </div>
 
         <button className="hero-cta" aria-label="Start" onClick={() => scrollToId("p2007")}>

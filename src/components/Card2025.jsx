@@ -1,7 +1,7 @@
 import React, { useMemo, useRef } from "react";
 import { motion, useScroll, useTransform, useInView, useReducedMotion } from "framer-motion";
 import { scrollToNext } from "../lib/scroll.js";
-import { getImagePath } from "../lib/imageUtils.js";
+import { asset } from "../lib/asset.js";
 
 export default function Card2025() {
   const sectionRef = useRef(null);
@@ -53,7 +53,7 @@ export default function Card2025() {
             style={prefersReducedMotion ? undefined : { y: phoneY, scale: phoneS, rotate: phoneR }}
           >
             <img
-              src="/iPhone-interaction-Timeline/assets/2025/device.png"
+              src={asset('assets/2025/device.png')}
               alt="Future iPhone device concept"
               width="1390"
               height="3253"

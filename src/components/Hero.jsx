@@ -1,10 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-
-import React from "react";
-import { motion } from "framer-motion";
-import { useReducedMotion } from "framer-motion";
-import { getImagePath } from "../lib/imageUtils.js";
+import { asset } from "../lib/asset.js";
 
 const DRAMA = 1.0;
 
@@ -53,7 +49,7 @@ export default function Hero() {
 
           <div className="hero-right" aria-hidden="true">
             <motion.img
-              src="/iPhone-interaction-Timeline/assets/hero-mockup.png"
+              src={asset('assets/hero-mockup.png')}
               alt=""
               className="hero-device"
               style={{ y: phoneY, scale: phoneS, rotate: phoneR }}

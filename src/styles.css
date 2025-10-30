@@ -1243,7 +1243,7 @@ body section#p2017 .section-cta--ink svg {
   flex-direction: column;
   justify-content: flex-start;
   align-self: flex-start;
-  margin-top: clamp(-40px, -6vh, -20px);
+  margin-top: 100px;
 }
 
 #p2022 .era-tag{
@@ -1284,14 +1284,18 @@ body section#p2017 .section-cta--ink svg {
 }
 
 #p2022 .era-year{
-  position: static;
-  margin-top: 50px;
+  position: absolute;
+  left: max(20px, 4vw);
+  bottom: clamp(60px, 6vh, 80px);
+  right: auto;
+  top: auto;
   font-size: clamp(96px, 22vw, 220px);
   font-weight:700;
   letter-spacing:-0.03em;
-  color: rgba(232,237,246,.12);
-  opacity:.12;
+  color: rgba(232,237,246,.08);
+  opacity:.99;
   pointer-events:none;
+  transform: none;
 }
 
 
@@ -1719,15 +1723,14 @@ body section#p2017 .section-cta--ink svg {
 } 
 #p2022 .era-year{
   position: absolute;
-  left: clamp(96px, 14vw, 220px);
-  bottom: clamp(12px, 3vh, 36px);
+  
+  bottom: clamp(12px, 7vh, 70px);
   padding-left: 0;
   padding-top: 0;
   line-height: 1;
   z-index: 0;
   pointer-events: none;
   opacity: 1;                          
-
   
   background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 45%, #22d3ee 100%);
   -webkit-background-clip: text;

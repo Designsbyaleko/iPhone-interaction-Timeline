@@ -21,23 +21,23 @@ export default function CardFuture() {
     offset: ["start 85%", "end 15%"],
   });
 
-  const phoneY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [80, -80]);
-  const phoneS = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [0.985, 1.06]);
-  const phoneR = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [-0.4, 0.4]);
+  const phoneY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [90, -90]);
+  const phoneS = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [0.97, 1.05]);
+  const phoneR = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [-0.6, 0.6]);
 
-  const copyX = useTransform(scrollYProgress, [0, 0.35, 1], prefersReducedMotion ? [0, 0, 0] : [-40, 0, 140]);
-  const copyO = useTransform(scrollYProgress, [0, 0.2, 1], prefersReducedMotion ? [1, 1, 1] : [0, 1, 0.1]);
+  const copyX = useTransform(scrollYProgress, [0, 0.35, 1], prefersReducedMotion ? [0, 0, 0] : [-46, 0, 160]);
+  const copyO = useTransform(scrollYProgress, [0, 0.2, 1], prefersReducedMotion ? [1, 1, 1] : [0, 1, 0.08]);
 
-  const yearX = useTransform(scrollYProgress, [0, 0.35, 1], prefersReducedMotion ? [0, 0, 0] : [-140, 0, 120]);
-  const yearS = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [0.96, 1.1]);
-  const yearO = useTransform(scrollYProgress, [0, 0.2, 1], prefersReducedMotion ? [0.1, 0.1, 0.1] : [0, 0.18, 0.1]);
+  const yearX = useTransform(scrollYProgress, [0, 0.35, 1], prefersReducedMotion ? [0, 0, 0] : [-36, 0, 260]);
+  const yearS = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [0.94, 1.12]);
+  const yearO = useTransform(scrollYProgress, [0, 0.2, 1], prefersReducedMotion ? [0.08, 0.08, 0.08] : [0, 0.14, 0.08]);
 
-  const spotX = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ["56%", "56%"] : ["54%", "50%"]);
-  const spotY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ["48%", "48%"] : ["42%", "58%"]);
-  const spotS = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [0.94, 1.14]);
-  const spotO = useTransform(scrollYProgress, [0, 0.5, 1], prefersReducedMotion ? [0.16, 0.16, 0.16] : [0.14, 0.24, 0.16]);
+  const spotX = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ["50%", "50%"] : ["52%", "48%"]);
+  const spotY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ["50%", "50%"] : ["44%", "56%"]);
+  const spotS = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [0.95, 1.12]);
+  const spotO = useTransform(scrollYProgress, [0, 0.5, 1], prefersReducedMotion ? [0.2, 0.2, 0.2] : [0.16, 0.26, 0.18]);
 
-  const inView = useInView(ref, { margin: "-22% 0px -22% 0px", once: true });
+  const inView = useInView(ref, { margin: "-20% 0px -20% 0px", once: true });
 
   return (
     <section

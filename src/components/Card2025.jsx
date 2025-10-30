@@ -81,7 +81,7 @@ export default function Card2025() {
             </h2>
             <p className="era-lede">On-device models offer the next step near what you are doing.</p>
             <p className="era-body">
-              Suggestions appear by the calendar, map, or keyboard when they are relevant, like adding an event or sharing
+              Suggestions appear by the messages, map, or keyboard when they are relevant, like adding an event or sharing
               an ETA. Every offer explains why it appeared and can be dismissed or muted. State flows across devices so work
               feels continuous. Motion remains soft and confirmable so the system feels helpful, not pushy.
             </p>

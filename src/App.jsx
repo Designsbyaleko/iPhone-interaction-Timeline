@@ -20,15 +20,21 @@ function scrollToId(id) {
 function Hero() {
   const ref = useRef(null);
   const prefersReducedMotion = useReducedMotion();
-  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end 30%"] });
 
-  const deviceY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, -120]);
-  const deviceR = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, -2]);
-  const titleY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [0, 0] : [0, -60]);
-  const titleOpacity = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [1, 0.86]);
+  // Smooth parallax transforms for text content - slower, more gradual
+  const titleY = useTransform(scrollYProgress, [0, 0.7], prefersReducedMotion ? [0, 0] : [0, -60]);
+  const titleOpacity = useTransform(scrollYProgress, [0, 0.4, 0.7], prefersReducedMotion ? [1, 1, 1] : [1, 0.95, 0.75]);
+  const titleScale = useTransform(scrollYProgress, [0, 0.7], prefersReducedMotion ? [1, 1] : [1, 0.985]);
 
-  const heroTextStyle = prefersReducedMotion ? undefined : { y: titleY, opacity: titleOpacity };
-  const heroImageStyle = prefersReducedMotion ? undefined : { y: deviceY, rotate: deviceR };
+  // Device image parallax with subtle rotation and scale - slower movement
+  const deviceY = useTransform(scrollYProgress, [0, 0.8], prefersReducedMotion ? [0, 0] : [0, -100]);
+  const deviceR = useTransform(scrollYProgress, [0, 0.8], prefersReducedMotion ? [0, 0] : [0, -2]);
+  const deviceScale = useTransform(scrollYProgress, [0, 0.8], prefersReducedMotion ? [1, 1] : [1, 0.96]);
+  const deviceOpacity = useTransform(scrollYProgress, [0, 0.5, 0.8], prefersReducedMotion ? [1, 1, 1] : [1, 0.92, 0.8]);
+
+  const heroTextStyle = prefersReducedMotion ? undefined : { y: titleY, opacity: titleOpacity, scale: titleScale };
+  const heroImageStyle = prefersReducedMotion ? undefined : { y: deviceY, rotate: deviceR, scale: deviceScale, opacity: deviceOpacity };
 
   return (
     <section ref={ref} className="hero" aria-label="Landing">

@@ -26,7 +26,7 @@ export default function Card2017() {
   const copyO = useTransform(scrollYProgress, [0, 0.2, 1], prefersReducedMotion ? [1, 1, 1] : [0, 1, 0.08]);
 
   const yearS = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? [1, 1] : [0.94, 1.12]);
-  const yearO = useTransform(scrollYProgress, [0, 0.2, 1], prefersReducedMotion ? [0.08, 0.08, 0.08] : [0, 0.14, 0.08]);
+  const yearO = useTransform(scrollYProgress, [0, 0.2, 1], prefersReducedMotion ? [0.15, 0.15, 0.15] : [0.08, 0.18, 0.12]);
 
   const spotX = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ["50%", "50%"] : ["52%", "48%"]);
   const spotY = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ["50%", "50%"] : ["44%", "56%"]);
@@ -134,6 +134,7 @@ export default function Card2017() {
         aria-label="Next era"
         onClick={() => scrollToNext("#p2017")}
         title="Next era"
+        style={{ bottom: '100px'}}
       >
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

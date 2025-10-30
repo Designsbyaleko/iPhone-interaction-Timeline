@@ -117,7 +117,7 @@ export default function Card2022() {
           aria-label="Next era"
           onClick={() => scrollToNext("#p2022")}
           title="Next era"
-          style={{ bottom: '150px', zIndex: 3 }}
+          style={{ bottom: '-250px', zIndex: 3 }}
         >
           <svg viewBox="0 0 24 24" fill="none">
             <path d="M6 9l6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

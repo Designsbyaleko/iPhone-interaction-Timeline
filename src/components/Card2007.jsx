@@ -47,6 +47,8 @@ export default function Card2007() {
             <img
               src={asset('assets/c1-home-front.png')}
               alt="iPhone (original) with Home button"
+              width="1200"
+              height="2400"
               className="era-phone era-phone--big"
               draggable="false"
             />

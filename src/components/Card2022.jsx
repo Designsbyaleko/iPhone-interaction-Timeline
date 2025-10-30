@@ -97,7 +97,8 @@ export default function Card2022() {
           <div className="phone-wrap phone-wrap--2022">
             <img
               src={asset('assets/2022/device.png')}
-
+              alt="iPhone 14 Pro with Dynamic Island"
+              width="1215"
               height="2567"
               loading="lazy"
               decoding="async"

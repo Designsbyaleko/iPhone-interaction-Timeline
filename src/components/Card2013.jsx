@@ -99,8 +99,9 @@ export default function Card2013() {
             {}
             <img
               src={asset('assets/c2-minimal-front.png')}
-
               alt="iPhone with iOS 7 Home screen"
+              width="1200"
+              height="2400"
               className="era-phone era-phone--big"
               loading="lazy"
               decoding="async"

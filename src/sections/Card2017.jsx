@@ -72,6 +72,8 @@ export default function Card2017() {
             <img
               src={asset('assets/2017/phones-angled.png')}
               alt="iPhone X models angled view"
+              width="1920"
+              height="1274"
               loading="lazy"
               decoding="async"
               draggable="false"

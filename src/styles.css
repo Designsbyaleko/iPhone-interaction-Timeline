@@ -1264,6 +1264,7 @@ body section#p2017 .section-cta--ink svg {
   letter-spacing: -0.02em;
   margin: 0 0 18px 0;
   color: #ffffff;
+  hyphens: none;
 }
 
 #p2022 .era-lede{
@@ -1915,7 +1916,7 @@ section#p2013 .era-chip {
 }
 
 section#p2013 .section-cta--ink {
-  background: rgba(29, 29, 31, 0.92) !important;
+  background: rgba(0, 0, 0, 0.92) !important;
   border-color: rgba(29, 29, 31, 1) !important;
 }
 
@@ -2039,7 +2040,7 @@ section#p2025 .era-body {
 
 section#p2025 .section-cta--on-dark,
 section#p2025 .section-cta {
-  background: rgba(29, 29, 31, 0.92) !important;
+  background: rgba(0, 0, 0, 0.92) !important;
   border-color: rgba(29, 29, 31, 1) !important;
 }
 

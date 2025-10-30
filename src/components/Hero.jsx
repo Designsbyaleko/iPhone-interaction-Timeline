@@ -51,6 +51,8 @@ export default function Hero() {
             <motion.img
               src={asset('assets/hero-mockup.png')}
               alt=""
+              width="1002"
+              height="2051"
               className="hero-device"
               style={{ y: phoneY, scale: phoneS, rotate: phoneR }}
               draggable="false"
